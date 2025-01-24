@@ -21,11 +21,20 @@ async def talk_with_agent():
           properties:
             message:
               type: string
+              required: true
               description: A message from the agent.
             history:
               type: array
+              required: False
               items:
-                type: string
+                type: object
+                properties:
+                  role:
+                    type: string
+                    description: The role of the message.
+                  content:
+                    type: string
+                    description: The content of the message.
               description: A list of previous messages.
     responses:
       200:

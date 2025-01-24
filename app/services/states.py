@@ -29,7 +29,14 @@ def search_on_web(state: State):
 
     print(search_results, end="\n\n")
 
-    return {"messages": [SEARCH_PROMPT.format(search_results=search_results)]}
+    return {
+        "messages": [
+            {
+                "role": "assistant",
+                "content": SEARCH_PROMPT.format(search_results=search_results),
+            }
+        ]
+    }
 
 
 def route_agents(state: State):
