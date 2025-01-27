@@ -9,3 +9,6 @@ flask==2.3.3
 Werkzeug==2.3.8
 Flask-API==3.1
 flasgger==0.9.7.1
+uvicorn==0.30.6
+asyncio==3.4.3
+Flask[async]==2.3.3
