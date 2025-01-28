@@ -4,6 +4,26 @@ This API provides access to a generative AI agent that can converse on a wide ra
 
 ---
 
+## Getting Started
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the API:
+
+```bash
+uvicorn app.main:app --interface wsgi --host 0.0.0.0 --port 8080
+```
+
+Open Swagger:
+
+```
+localhost:8080/apidocs
+```
+
 ## Overview
 
 - **Endpoint**: `/api/v1/agent`
