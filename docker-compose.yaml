@@ -1,11 +1,11 @@
-name: "simple_agent_llm"
+name: "simple-agent-llm"
 
 services:
   simple_agent_llm:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: simple_agent_llm
+    container_name: simple-agent-llm
     ports:
       - "8080:8080"
     volumes:
