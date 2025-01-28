@@ -1,0 +1,23 @@
+name: "simple-agent-llm"
+
+services:
+  simple_agent_llm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: simple-agent-llm
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    command:
+      [
+        "uvicorn",
+        "app.main:app",
+        "--interface",
+        "wsgi",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8080",
+      ]
